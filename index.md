@@ -7,21 +7,24 @@
 
 ## Étape 2 : installation des logiciels de base
 
-Suivez les étapes suivantes (certaines peuvent prendre du temps), en copiant le code ci-dessous dans un Terminal :
+
+
+Exécutez le code ci-dessous ligne à ligne dans un Terminal :
 
 ```bash
 sudo snap install code --classic
-mkdir softs && cd softs
 
+mkdir softs && cd softs
 wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.1.0-1-Linux-x86_64.sh
 bash Miniconda3-py310_23.1.0-1-Linux-x86_64.sh
+
 conda update -n base -c defaults conda
 conda install -n base conda-libmamba-solver
 conda config --set solver libmamba
 
-wget ..../environment.yml
-conda env create --name env_mas -f environment.yml
-echo "\n\nconda activate env_mas" >> ~/.bashrc
+wget https://rtavenar.github.io/install_portables_master_mas/environment.yml
+conda env create -f environment.yml
+echo "\n\nconda activate mas" >> ~/.bashrc
 
 sudo apt-get install texlive
 ```
