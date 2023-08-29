@@ -13,7 +13,8 @@ Suivez les étapes suivantes (certaines peuvent prendre du temps), en copiant le
 sudo snap install code --classic
 mkdir softs && cd softs
 
-wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.1.0-1-Linux-x86_64.sh && bash Miniconda3-py310_23.1.0-1-Linux-x86_64.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.1.0-1-Linux-x86_64.sh
+bash Miniconda3-py310_23.1.0-1-Linux-x86_64.sh
 conda update -n base -c defaults conda
 conda install -n base conda-libmamba-solver
 conda config --set solver libmamba
