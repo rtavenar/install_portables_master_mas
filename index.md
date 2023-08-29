@@ -3,7 +3,6 @@
 ## Étape 1 : installation Ubuntu LTS
 
 * Installation à partir de la clef USB bootable fournie
-* Diviser le disque dur en 2 partitions : une partition pour l'OS, une pour les données
 
 ## Étape 2 : installation des logiciels de base
 
