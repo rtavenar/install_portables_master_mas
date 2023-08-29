@@ -22,7 +22,7 @@ conda update -n base -c defaults conda
 conda install -n base conda-libmamba-solver
 conda config --set solver libmamba
 
-wget https://rtavenar.github.io/install_portables_master_mas/environment.yml
+wget https://rtavenar.github.io/install_portables_master_mas/assets/environment.yml
 conda env create -f environment.yml
 echo "\n\nconda activate mas" >> ~/.bashrc
 
