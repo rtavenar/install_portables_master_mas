@@ -25,7 +25,7 @@ echo "\n\nconda activate env_mas" >> ~/.bashrc
 sudo apt-get install texlive
 ```
 
-## Étape 3 : configuration des logiciels installés
+## Étape 3 : configuration et prise en main des logiciels installés
 
 * Configurer VS Code
     * Lancer VS Code
