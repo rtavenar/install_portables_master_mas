@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Anaconda
+Exec=~/miniconda3/bin/anaconda-navigator
+Terminal=false

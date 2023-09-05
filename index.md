@@ -49,6 +49,13 @@ conda install anaconda-navigator
 
 La fin de l'installation de votre environnement `conda` va se dérouler dans `anaconda-navigator`. Lancez ce programme en entrant la commande `anaconda-navigator` dans un terminal, puis créez un nouvel environnement en important le fichier `mas.yml` qui se trouve dans votre dossier personnel (répertoire "home").
 
+Puis retournez dans un terminal pour entrer ces deux lignes qui définissent `mas` comme votre environnement `conda` par défaut dans le terminal :
+
+```bash
+echo "\n\nconda activate mas" >> ~/.bashrc
+echo "\n\nconda activate mas" >> ~/.zshrc
+```
+
 Enfin, pour installer une version récente de R et RStudio, exécutez les lignes suivantes :
 
 ```bash
@@ -63,11 +70,6 @@ wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.06.2-561-am
 sudo dpkg -i rstudio-2023.06.2-561-amd64.deb
 ```
 
-```bash
-echo "\n\nconda activate mas" >> ~/.bashrc
-echo "\n\nconda activate mas" >> ~/.zshrc
-```
-
 ## Étape 3 : configuration et prise en main des logiciels installés
 
 * Configuration de VS Code
@@ -79,3 +81,6 @@ echo "\n\nconda activate mas" >> ~/.zshrc
 * Installation de logiciels supplémentaires
     * Présentation de la bibliothèque logicielle Ubuntu
 * Ajout d'un raccourci vers Anaconda sur le bureau:
+    ```bash
+    cd ~/Bureau && wget https://rtavenar.github.io/install_portables_master_mas/assets/anaconda.desktop
+    ```
