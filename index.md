@@ -2,21 +2,38 @@
 
 ## Étape 1 : installation Ubuntu LTS
 
-* Installation à partir de la clef USB bootable fournie
+L'OS Ubuntu est déjà préinstallé avec un utilisateur `mas` dont le mot de passe vous sera fourni pendant la séance d'installation.
+
+Il vous reste à :
+* créer un nouvel utilisateur (et choisir son mot de passe)
+* vous connecter avec cet utilisateur
+* configurer le WiFi eduroam (`NUMETUDIANT@univ-rennes2.fr` / mot de passe étudiant)
+* Modifier le nom de votre machine sur le réseau :
+    1. `sudo nano /etc/hostname` -> remplacer le nom de host par le `UCxxxxxx` avec le numéro inscrit sous votre ordinateur
+    2. `sudo nano /etc/hosts` -> remplacer toutes les occurrences du nom de host par le `UCxxxxxx` avec le numéro inscrit sous votre ordinateur
+    3. redémarrer votre ordinateur
+* Mettre à jour les packages Ubuntu :
+    ```bash
+    sudo snap refresh
+    ```
 
 ## Étape 2 : installation des logiciels de base
-
-
 
 Exécutez le code ci-dessous ligne à ligne dans un Terminal :
 
 ```bash
+# Installation de VS Code
 sudo snap install code --classic
 
-mkdir softs && cd softs
-wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.1.0-1-Linux-x86_64.sh
-bash Miniconda3-py310_23.1.0-1-Linux-x86_64.sh
+# Installation de Miniconda
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.1.0-1-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+~/miniconda3/bin/conda init bash
+~/miniconda3/bin/conda init zsh
 
+# Création d'un environnement conda fonctionnel
 conda update -n base -c defaults conda
 conda install -n base conda-libmamba-solver
 conda config --set solver libmamba
@@ -24,8 +41,8 @@ conda config --set solver libmamba
 wget https://rtavenar.github.io/install_portables_master_mas/assets/environment.yml
 conda env create -f environment.yml
 echo "\n\nconda activate mas" >> ~/.bashrc
-
-sudo apt-get install texlive
+echo "\n\nconda activate mas" >> ~/.zshrc
+rm -f environment.yml
 ```
 
 ## Étape 3 : configuration et prise en main des logiciels installés
@@ -37,6 +54,16 @@ sudo apt-get install texlive
 * Configurer RStudio
     * **TODO**: Demander à Laurent les instructions
 * Gestion des fichiers
-    * **TODO**: instructions pour sauvegarder ses documents au bon endroit
 * Installation de logiciels supplémentaires
     * Présentation de la bibliothèque logicielle Ubuntu
+
+## Étape 4 (optionnelle) : installation de LaTeX
+
+```bash
+# Installation de LaTeX
+sudo snap install texlive-basic
+```
+
+* Configuration VS Code
+    * Lancer VS Code
+    * Dans l'onglet "Extensions", installer l'extension "LaTeX Workshop"
