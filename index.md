@@ -49,6 +49,19 @@ conda install anaconda-navigator
 
 La fin de l'installation de votre environnement `conda` va se dérouler dans `anaconda-navigator`. Lancez ce programme en entrant la commande `anaconda-navigator` dans un terminal, puis créez un nouvel environnement en important le fichier `environment.yml` qui se trouve dans votre dossier personnel (répertoire "home").
 
+Enfin, pour installer une version récente de R et RStudio, exécutez les lignes suivantes :
+
+```bash
+sudo apt update -qq
+sudo apt install --no-install-recommends software-properties-common dirmngr
+wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+sudo apt install --no-install-recommends r-base
+
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.1-461-amd64.deb
+sudo dpkg -i rstudio-2022.02.1-461-amd64.deb
+```
+
 <!-- ```bash
 conda env create -f environment.yml
 echo "\n\nconda activate mas" >> ~/.bashrc
