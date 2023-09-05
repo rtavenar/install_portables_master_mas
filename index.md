@@ -42,12 +42,12 @@ conda update -n base -c defaults conda
 conda install -n base conda-libmamba-solver
 conda config --set solver libmamba
 
-wget https://rtavenar.github.io/install_portables_master_mas/assets/environment.yml
+wget https://rtavenar.github.io/install_portables_master_mas/assets/mas.yml
 sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
 conda install anaconda-navigator
 ```
 
-La fin de l'installation de votre environnement `conda` va se dérouler dans `anaconda-navigator`. Lancez ce programme en entrant la commande `anaconda-navigator` dans un terminal, puis créez un nouvel environnement en important le fichier `environment.yml` qui se trouve dans votre dossier personnel (répertoire "home").
+La fin de l'installation de votre environnement `conda` va se dérouler dans `anaconda-navigator`. Lancez ce programme en entrant la commande `anaconda-navigator` dans un terminal, puis créez un nouvel environnement en important le fichier `mas.yml` qui se trouve dans votre dossier personnel (répertoire "home").
 
 Enfin, pour installer une version récente de R et RStudio, exécutez les lignes suivantes :
 
@@ -57,37 +57,25 @@ sudo apt install --no-install-recommends software-properties-common dirmngr
 wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
 sudo apt install --no-install-recommends r-base
-sudo apt-get install libgdal-dev
+sudo apt install libgdal-dev texlive libssl-dev libcurl4-openssl-dev unixodbc-dev libxml2-dev libmariadb-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
 
 wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.06.2-561-amd64.deb
 sudo dpkg -i rstudio-2023.06.2-561-amd64.deb
 ```
 
-<!-- ```bash
-conda env create -f environment.yml
+```bash
 echo "\n\nconda activate mas" >> ~/.bashrc
 echo "\n\nconda activate mas" >> ~/.zshrc
-rm -f environment.yml
-``` -->
+```
 
 ## Étape 3 : configuration et prise en main des logiciels installés
 
 * Configuration de VS Code
-    * Lancer VS Code depuis Anaconda Navigator
+    * Lancer VS Code **depuis Anaconda Navigator**
     * Dans l'onglet "Extensions", installer l'extension "Python" (éditée par Microsoft) si elle n'est pas déjà installée
 * Prise en main de RStudio
-    * Lancer RStudio depuis Anaconda Navigator
+    * Lancer RStudio **depuis la liste des applications (pas depuis Anaconda Navigator)**
 * Gestion des fichiers
 * Installation de logiciels supplémentaires
     * Présentation de la bibliothèque logicielle Ubuntu
-
-## Étape 4 (optionnelle) : installation de LaTeX
-
-```bash
-# Installation de LaTeX
-sudo apt install texlive
-```
-
-* Configuration VS Code
-    * Lancer VS Code
-    * Dans l'onglet "Extensions", installer l'extension "LaTeX Workshop"
+* Ajout d'un raccourci vers Anaconda sur le bureau:

@@ -1,8 +1,5 @@
 name: mas
 dependencies:
-  - r-essentials
-  - r-base
-  - rstudio
   - numpy
   - pandas
   - scikit-learn
