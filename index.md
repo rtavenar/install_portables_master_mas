@@ -85,7 +85,7 @@ rm -f environment.yml
 
 ```bash
 # Installation de LaTeX
-sudo snap install texlive-basic
+sudo apt install texlive
 ```
 
 * Configuration VS Code
