@@ -82,5 +82,5 @@ sudo dpkg -i rstudio-2023.06.2-561-amd64.deb
     * Présentation de la bibliothèque logicielle Ubuntu
 * Ajout d'un raccourci vers Anaconda sur le bureau:
     ```bash
-    cd ~/Bureau && wget https://rtavenar.github.io/install_portables_master_mas/assets/anaconda.desktop
+    cd ~/Bureau && wget https://rtavenar.github.io/install_portables_master_mas/assets/anaconda.desktop && chmod u+x anaconda.desktop && sed -i 's/USERNAME/${USERNAME}/g' anaconda.desktop
     ```
