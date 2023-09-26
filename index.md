@@ -47,7 +47,7 @@ sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 
 conda install anaconda-navigator
 ```
 
-La fin de l'installation de votre environnement `conda` va se dérouler dans `anaconda-navigator`. Lancez ce programme en entrant la commande `anaconda-navigator` dans un terminal, puis créez un nouvel environnement en important le fichier `mas.yml` qui se trouve dans votre dossier personnel (répertoire "home").
+La fin de l'installation de votre environnement `conda` va se dérouler dans `anaconda-navigator`. Lancez ce programme en entrant la commande `anaconda-navigator` dans un terminal, puis créez un nouvel environnement en important le fichier `mas.yml` qui se trouve dans votre dossier personnel (répertoire "home"). Renommez ce nouvel environnement `mas`.
 
 Puis retournez dans un terminal pour entrer ces deux lignes qui définissent `mas` comme votre environnement `conda` par défaut dans le terminal :
 
@@ -72,6 +72,10 @@ sudo dpkg -i rstudio-2023.06.2-561-amd64.deb
 
 ## Étape 3 : configuration et prise en main des logiciels installés
 
+* Ajout d'un raccourci vers Anaconda sur le bureau:
+    ```bash
+    cd ~/Bureau && wget https://rtavenar.github.io/install_portables_master_mas/assets/anaconda.desktop && chmod u+x anaconda.desktop && sed -i 's/USERNAME/${USERNAME}/g' anaconda.desktop
+    ```
 * Configuration de VS Code
     * Lancer VS Code **depuis Anaconda Navigator**
     * Dans l'onglet "Extensions", installer l'extension "Python" (éditée par Microsoft) si elle n'est pas déjà installée
@@ -80,7 +84,3 @@ sudo dpkg -i rstudio-2023.06.2-561-amd64.deb
 * Gestion des fichiers
 * Installation de logiciels supplémentaires
     * Présentation de la bibliothèque logicielle Ubuntu
-* Ajout d'un raccourci vers Anaconda sur le bureau:
-    ```bash
-    cd ~/Bureau && wget https://rtavenar.github.io/install_portables_master_mas/assets/anaconda.desktop && chmod u+x anaconda.desktop && sed -i 's/USERNAME/${USERNAME}/g' anaconda.desktop
-    ```
