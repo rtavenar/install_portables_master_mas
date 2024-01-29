@@ -52,8 +52,8 @@ La fin de l'installation de votre environnement `conda` va se dérouler dans `an
 Puis retournez dans un terminal pour entrer ces deux lignes qui définissent `mas` comme votre environnement `conda` par défaut dans le terminal :
 
 ```bash
-echo "\n\nconda activate mas" >> ~/.bashrc
-echo "\n\nconda activate mas" >> ~/.zshrc
+echo "conda activate mas" >> ~/.bashrc
+echo "conda activate mas" >> ~/.zshrc
 ```
 
 Enfin, pour installer une version récente de R et RStudio, exécutez les lignes suivantes :
