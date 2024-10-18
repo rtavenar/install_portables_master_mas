@@ -4,6 +4,8 @@
 
 L'OS Ubuntu est déjà préinstallé avec un utilisateur `mas` dont le mot de passe vous sera fourni pendant la séance d'installation.
 
+_Si Ubuntu vous propose de mettre à jour votre système, ne pas exécuter cette mise à jour, c'est la DSI qui s'occupera des mises à jour pour vous._
+
 Il vous reste à :
 1. Modifier le mot de passe de l'utilisateur `mas`
 2. Vous connecter à eduroam avec l'identité :
