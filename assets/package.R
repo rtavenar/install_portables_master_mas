@@ -1,55 +1,55 @@
-# tidy
-install.packages(c("tidyverse",
-                   "tidymodels")
-)
-# Machine Learning
+# # tidy
+# install.packages(c("tidyverse",
+#                    "tidymodels")
+# )
+# # Machine Learning
 
-install.packages(c("kknn",
-                   "klaR",
-                   "doMC",
-                   "pROC",
-                   "plotROC",
-                   "doParallel",
-                   "rpart.plot",
-                   "ISLR",
-                   "caret",
-                   "e1071",
-                   "kernlab",
-                   "randomForest",
-                   "ranger",
-                   "glmnet",
-                   "OOBCurve",
-                   "gbm",
-                   "xgboost",
-                   "vip",
-                   "keras",
-                   "UBL",
-                   "cccd",
-                   "bestglm",
-                   "visdat"
-))
-
-
+# install.packages(c("kknn",
+#                    "klaR",
+#                    "doMC",
+#                    "pROC",
+#                    "plotROC",
+#                    "doParallel",
+#                    "rpart.plot",
+#                    "ISLR",
+#                    "caret",
+#                    "e1071",
+#                    "kernlab",
+#                    "randomForest",
+#                    "ranger",
+#                    "glmnet",
+#                    "OOBCurve",
+#                    "gbm",
+#                    "xgboost",
+#                    "vip",
+#                    "keras",
+#                    "UBL",
+#                    "cccd",
+#                    "bestglm",
+#                    "visdat"
+# ))
 
 
-# Visu
-install.packages(c("FactoMineR",
-                   "visNetwork",
-                   "sparkline",
-                   "gridExtra",
-                   "rAmCharts",
-                   "sf",
-                   "rmapshaper",
-                   "rnaturalearth",
-                   "leaflet",
-                   "plotly",
-                   "igraph",
-                   "flexdashboard",
-                   "corrplot",
-                   "shinydashboard",
-                   "mapview",
-                   "ggiraph"
-))
+
+
+# # Visu
+# install.packages(c("FactoMineR",
+#                    "visNetwork",
+#                    "sparkline",
+#                    "gridExtra",
+#                    "rAmCharts",
+#                    "sf",
+#                    "rmapshaper",
+#                    "rnaturalearth",
+#                    "leaflet",
+#                    "plotly",
+#                    "igraph",
+#                    "flexdashboard",
+#                    "corrplot",
+#                    "shinydashboard",
+#                    "mapview",
+#                    "ggiraph"
+# ))
 
 # Quelques tests
 
